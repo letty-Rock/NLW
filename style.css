@@ -66,10 +66,20 @@ nav {
   margin-right: 1.5rem;
 }
 
+.grid {
+  display: grid;
+  gap: 2rem;
+}
+
 .section {
   padding: 5rem 0;
 }
 
 #home .container {
   margin: 0;
+}
+
+#home .text {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
 }
