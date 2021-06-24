@@ -53,26 +53,15 @@ h1 {
 .button:hover {
   background: var(--base-color-alt);
 }
-
-#header {
-  border-bottom: 1px solid #e4e4e4;
+.divider-1 {
+  height: 1px;
+  background: linear-gradient(
+    270deg,
+    hsla(var(--hue), 36%, 57%, 1) 0%,
+    hsla(var(--hue), 65%, 88%, 0.34) 100%
+  );
 }
-
-nav {
-  height: 4.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.logo {
-  font: 700 1.31rem 'poppins', sans-serif;
-  color: var(--title-color);
-}
-.logo span {
-  color: var(--base-color);
-}
-
+/*== Layout ==*/
 .container {
   width: 100%;
   margin-left: 1.5rem;
@@ -87,7 +76,41 @@ nav {
 .section {
   padding: 5rem 0;
 }
+#header {
+  border-bottom: 1px solid #e4e4e4;
+  margin-bottom: 2rem;
+  display: flex;
 
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: var(--body-color);
+}
+
+nav {
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font: 700 1.31rem 'poppins', sans-serif;
+  color: var(--title-color);
+}
+.logo span {
+  color: var(--base-color);
+}
+
+main {
+  margin-top: var(--header-height);
+}
+
+#home {
+  overflow: hidden;
+}
 #home .container {
   margin: 0;
 }
