@@ -29,7 +29,11 @@ img {
   --text-color-light: hsl(0 0% 98%);
   --body-color: hsl(0 0% 98%);
 }
+
 /*------- BASE ---------*/
+html {
+  scroll-behavior: smooth;
+}
 body {
   font: 400 1rem 'Dm Sans', sans-serif;
   color: var(--text-color);
@@ -71,9 +75,9 @@ body {
     270deg,
     hsla(var(--hue), 65%, 88%, 0.34),
     hsla(var(--hue), 36%, 57%, 1)
-    
   );
 }
+
 /*== Layout ==*/
 .container {
   margin-left: 1.5rem;
@@ -88,9 +92,17 @@ body {
 .section {
   padding: 5rem 0;
 }
-.section .title{
+.section .title {
   margin-bottom: 1rem;
 }
+
+.section header {
+  margin-bottom: 4rem;
+}
+.section header strong {
+  color: var(--base-color);
+}
+
 #header {
   border-bottom: 1px solid #e4e4e4;
   margin-bottom: 2rem;
@@ -152,6 +164,11 @@ nav ul li a:hover::after {
 nav .menu {
   opacity: 0;
   visibility: hidden;
+  top: -20rem;
+  transition: 0.2s;
+}
+nav .menu ul {
+  display: none;
 }
 /*=======Mostrar menu========*/
 nav.show .menu {
@@ -165,10 +182,12 @@ nav.show .menu {
   position: fixed;
   top: 0;
   left: 0;
-}
-nav.show .menu {
   display: grid;
   place-content: center;
+}
+
+nav.show .menu ul {
+  display: grid;
 }
 nav.show ul.grid {
   gap: 4rem;
@@ -176,7 +195,7 @@ nav.show ul.grid {
 /*======= taggle menu ====*/
 .taggle {
   color: var(--base-color);
-  font size: 1.5rem;
+  font-size: 1.5rem;
   cursor: pointer;
 }
 nav .icon-close {
@@ -184,12 +203,14 @@ nav .icon-close {
   opacity: 0;
 
   position: absolute;
+  top: -1.5rem;
   right: 1.5rem;
+  transition: 0.2s;
 }
 nav.show div.icon-close {
   visibility: visible;
   opacity: 1;
-  /*transição bacana*/
+  top: 1.5rem;
 }
 
 /*======= home ====*/
@@ -236,7 +257,6 @@ nav.show div.icon-close {
   margin-bottom: 2rem;
 }
 
-
 /*======= About ====*/
 #about {
   background: white;
@@ -260,7 +280,6 @@ nav.show div.icon-close {
 
 #about .image img {
   position: relative;
- 
 }
 
 #about .image img,
@@ -271,5 +290,25 @@ nav.show div.icon-close {
 #about .text {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
-
+}
+/*======= Services ====*/
+.cards.grid {
+  gap: 1.5rem;
+}
+.card {
+  padding: 3.625rem 2rem;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
+  border-bottom: 0.25rem solid var(--base-color);
+  border-radius: 0.25rem 0.25rem 0 0;
+  text-align: center;
+}
+.card i {
+  display: block;
+  margin-bottom: 1.5rem;
+  font-size: 5rem;
+  color: var(--base-color);
+}
+.card .title {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
 }
