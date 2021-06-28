@@ -114,6 +114,9 @@ body {
   z-index: 100;
   background-color: var(--body-color);
 }
+#header.scroll {
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.15);
+}
 main {
   margin-top: calc(var(--header-height) + 2rem);
 }
@@ -131,9 +134,9 @@ main {
 nav {
   height: var(--header-height);
   display: flex;
-  width: 100%;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
 }
 
 nav ul li {
@@ -192,8 +195,8 @@ nav.show .menu ul {
 nav.show ul.grid {
   gap: 4rem;
 }
-/*======= taggle menu ====*/
-.taggle {
+/*======= toggle menu ====*/
+.toggle {
   color: var(--base-color);
   font-size: 1.5rem;
   cursor: pointer;
@@ -243,7 +246,6 @@ nav.show div.icon-close {
 #home .image img,
 #home .image::before {
   border-radius: 0.25rem;
-  text-align: center;
 }
 #home .text {
   margin-left: 1.5rem;
@@ -285,7 +287,6 @@ nav.show div.icon-close {
 #about .image img,
 #about .image::before {
   border-radius: 0.25rem;
-  text-align: center;
 }
 #about .text {
   margin-left: 1.5rem;
