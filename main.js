@@ -24,8 +24,9 @@ const header = document.querySelector('#header')
 const navHeight = header.offsetHeight
 
 window.addEventListener('scroll', function () {
-  if (window.scrolly >= navHeight) {
+  if (window.scrollY >= navHeight) {
     //scroll é maior que a altura do header
+    header.classList.add('scroll')
   } else {
     //menor que a altura do header
     header.classList.remove('scroll')
