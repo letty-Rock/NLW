@@ -57,3 +57,20 @@ scrollReveal.reveal(
   `,
   { interval: 100 }
 )
+/*botão voltar ao topo*/
+function backToTop() {
+  const backToTopButton = document.querySelector('.back-to-top')
+
+  if (window.scrollY >= 560) {
+    backToTopButton.classList.add('show')
+  } else {
+    backToTopButton.classList.remove('show')
+  }
+}
+
+/* When scroll*/
+
+window.addEventListener('scroll', function () {
+  changeHeaderWhenScroll()
+  backToTop()
+})
