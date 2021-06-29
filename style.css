@@ -35,14 +35,14 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  font: 400 1rem 'Dm Sans', sans-serif;
+  font: 400 1rem 'DM Sans', sans-serif;
   color: var(--text-color);
   background: var(--body-color);
   -webkit-font-smoothing: antialiased;
 }
 
 .title {
-  font: 700 1.875rem 'poppins', sans-serif;
+  font: 700 1.875rem 'Poppins', sans-serif;
   color: var(--title-color);
   -webkit-font-smoothing: auto;
 }
@@ -54,7 +54,7 @@ body {
   align-items: center;
   padding: 0 2rem;
   border-radius: 0.25rem;
-  font: 500 1rem 'Dm Sans', sans-serif;
+  font: 500 1rem 'DM Sans', sans-serif;
   transition: background 0.3s;
 }
 
@@ -116,9 +116,13 @@ body {
   width: 100%;
 }
 #header.scroll {
-  background: var(--base-color);
   box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.15);
 }
+/* Para trocar a cor da logo
+#header.scroll. logo span{
+  color: Black;
+}
+*/
 main {
   margin-top: calc(var(--header-height) + 2rem);
 }
