@@ -19,11 +19,10 @@ for (const link of links) {
   })
 }
 /* mudar o header quando der scroll*/
+function changeHeaderWhenScroll() {
+  const header = document.querySelector('#header')
+  const navHeight = header.offsetHeight
 
-const header = document.querySelector('#header')
-const navHeight = header.offsetHeight
-
-window.addEventListener('scroll', function () {
   if (window.scrollY >= navHeight) {
     //scroll é maior que a altura do header
     header.classList.add('scroll')
@@ -31,7 +30,7 @@ window.addEventListener('scroll', function () {
     //menor que a altura do header
     header.classList.remove('scroll')
   }
-})
+}
 
 const swiper = new Swiper('.swiper-container', {
   slidesPerView: 1,
