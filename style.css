@@ -28,6 +28,9 @@ img {
   --text-color: hsl(0 0% 46%);
   --text-color-light: hsl(0 0% 98%);
   --body-color: hsl(0 0% 98%);
+
+  /* fonts*/
+  --tittle-font-size: 1.875rem;
 }
 
 /*------- BASE ---------*/
@@ -42,7 +45,7 @@ body {
 }
 
 .title {
-  font: 700 1.875rem 'Poppins', sans-serif;
+  font: 700 var(--title-font-size) 'Poppins', sans-serif;
   color: var(--title-color);
   -webkit-font-smoothing: auto;
 }
@@ -334,7 +337,7 @@ nav.show div.icon-close {
 }
 #testimonials header {
   margin-left: 1.5rem;
-  margin-left: 1.5rem;
+  margin-right: 1.5rem;
   margin-bottom: 0;
 }
 #testimonials blockquote {
